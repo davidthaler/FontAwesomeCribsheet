@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Font Awesome Stuff</title>
+        <script src="https://kit.fontawesome.com/a46d123be3.js" crossorigin="anonymous"></script>
+        <!--
+        <link href="fontawesome-free-5.13.0-web/css/all.css" rel=stylesheet>
+        -->
+        <style>
+            body{
+                color: #2F2F2F;
+                background-color: whitesmoke;
+            }
+            h1, h2, h3, p, .normal{font-family: avenir, sans-serif;}
+            p{margin-left: 1em;}
+            .codeline{margin-left: 4em}
+            #main{
+                width: 50em;
+                margin:0 auto;
+            }
+            h1{text-align: center;}
+            code{background-color: #E8E8E8}
+            li{margin-bottom: 1em;}
+            .inline-icon{
+                vertical-align: -25%;
+                color: #4F4FDF;
+            }
+            section{column-count: 2}
+            .toobig{
+                position: relative;
+                left: 0.5em;
+                top: 0.25em;
+            }
+            ul{margin-bottom: 2em;}
+        </style>
+    </head>
+    <body>
+        <div id="main">
+        <h1>Using Font Awesome</h1>
+        <h2>Setup</h2>
+        <p>
+            To use the Font Awesome icon library, you first need to get an account at 
+            <a href="https://fontawesome.com/">Font Awesome</a>.
+            The free account should be fine. 
+            Once you get your account, you can access the library via a download or a CDN.
+        </p>
+        <p>
+            When you sign-up a Font Awesome "kit" will be created for you.
+            To use the CDN to import Font Awesome, include a tag like this in the 
+            <code>&lt;head&gt;</code> of your page:
+        </p>
+        <p class="codeline">
+            <code>
+                &lt;script src="https://kit.fontawesome.com/[your kit name].js" crossorigin="anonymous"&gt;&lt;/script&gt;
+            </code>
+        </p>
+        <p>
+            To download Font Awesome and serve it locally, go to the 
+            <a href="https://fontawesome.com/how-to-use/on-the-web/setup/hosting-font-awesome-yourself">Font Awesome self-hosting page</a> to get the download.
+            Then link the stylesheet in like you normally would:
+        </p>
+        <p class="codeline">
+            <code>
+                &lt;link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet"&gt;
+            </code>
+        </p>
+        <h2>Basic Usage</h2>
+        <p>
+            Once the Font Awesome library is included in your page, you just set the classes on any element to some of the Font Awesome classes. For example:
+        </p>
+        <p class="codeline">
+            <code>
+                &lt;span class="fas fa-arrow-left"&gt;&lt;/span&gt;
+            </code>
+        </p>
+        <p>
+            gives us a left arrow:
+            <span class="fas fa-arrow-left"></span>
+        </p>
+        <p>
+            Usually, you will need to specify 2 or 3 classes. The first is one of <code>far|fas</code>, this specifies a solid or regular (outline) version of the icon. The second class has the form <code>fa-[Icon Name]</code> and specifies the icon. There may also be a sizing class, which is explained in the section below.
+        </p>
+            
+        <h2>Sizing</h2>
+        <p>
+            The icons below all have <code>class="fas fa-search"</code>.
+            The icon size can be adjusted by adding a Font Awesome class 
+            that controls the size to the class list. 
+        </p>
+        <ul class="fa-ul">
+            <li>
+                <span class="fas fa-search fa-xs"></span>
+                <code>"fa-xs"</code>
+            </li>
+            <li>
+                <span class="fas fa-search fa-sm"></span>
+                <code>"fa-sm"</code>
+            </li>
+            <li>
+                <span class="fas fa-search"></span>
+                <span class="normal">None, or </span><code>"fa-md"</code>
+            </li>
+            <li>
+                <span class="fas fa-search fa-lg"></span>
+                <code>"fa-lg"</code>
+            </li>
+            <li>
+                <span class="fas fa-search fa-2x"></span>
+                <code>"fa-2x"</code>
+            </li>
+        </ul>
+
+        <h2>Styling</h2>
+        <p>
+            The Font Awesome icons can be sytled in CSS like text. So the code:
+        </p>
+        <p class="codeline">
+            <code>
+                &lt;span class="fas fa-check-square fa-lg" style="color:green"&gt;&lt;/span&gt;
+            </code>
+        </p>
+        <p>
+            gives us a green checkmark: 
+            <span class="fas fa-check-square fa-lg" style="color:green;"></span>
+        </p>
+        <p>
+            You can also change the icon size in CSS with the <code>font-size</code> property.
+            For example, the code:
+        </p>
+        <p class="codeline">
+            <code>&lt;span class="fas fa-search" style="font-size: 3rem;"&gt;&lt;/span&gt;</code>    
+        </p>
+        <p>
+            Gives us a large search icon: 
+            <span class="fas fa-search toobig" style="font-size: 3rem;"></span>
+        </p>
+
+            
+        <h2>Lists and Fixed-Width Icons</h2>
+            <!--TODO: explain fa-fw, fa-ul and fa-li (unused here) -->
+            
+        <h2>Useful Icons</h2>
+        <p>
+            Here are some of the useful icons that are available in the free edition of the Font Awesome library. These are mostly computing-related. There are a bunch more media, shopping and weather related icons that you can search for in the <a href="https://fontawesome.com/icons?d=gallery">Font Awesome icons gallery</a>.
+        </p>
+        
+        <section>
+        <h3>Help, Info and Search Icons</h3>
+        <ul class="fa-ul">
+            <li>
+                <span class="fas fa-search fa-lg fa-li"></span>
+                <code>class="fas fa-search"</code>
+            </li>
+            <li>
+                <span class="fas fa-info-circle fa-lg fa-li"></span>
+                <code>class="fas fa-info-circle"</code>
+            </li>
+            <li>
+                <span class="fas fa-info fa-lg fa-li"></span>
+                <code>class="fas fa-info"</code>
+            </li>
+            <li>
+                <span class="far fa-question-circle fa-lg fa-li"></span>
+                <code>class="far fa-question-circle"</code>
+            </li>
+            <li>
+                <span class="fas fa-question-circle fa-lg fa-li"></span>
+                <code>class="fas fa-question-circle"</code>
+            </li>
+            <li>
+                <span class="fas fa-question fa-lg fa-li"></span>
+                <code>class="fas fa-question"</code>
+            </li>
+        </ul>
+        
+        <h3>Arrows and Navigation</h3>
+        <p>All of the arrow classes below have up, down and right variants</p>
+        <ul class="fa-ul">
+            <li>
+                <span class="fas fa-arrow-circle-left fa-lg fa-li"></span>
+                <code>class="fas fa-arrow-circle-left"</code>
+            </li>
+            <li>
+                <span class="fas fa-arrow-alt-circle-left fa-lg fa-li"></span>
+                <code>class="fas fa-arrow-alt-circle-left"</code>
+            </li>
+            <li>
+                <span class="far fa-arrow-alt-circle-left fa-lg fa-li"></span>
+                <code>class="far fa-arrow-alt-circle-left"</code>
+            </li>
+            <li>
+                <span class="fas fa-arrow-left fa-lg fa-li"></span>
+                <code>class="fas fa-arrow-left"</code>
+            </li>
+            <li>
+                <span class="far fa-window-close fa-lg fa-li"></span>
+                <code>class="far fa-window-close"</code>
+            </li>
+            <li>
+                <span class="fas fa-window-close fa-lg fa-li"></span>
+                <code>class="fas fa-window-close"</code>
+            </li>
+        </ul>
+            
+        <h3>Undo and Delete</h3>
+        <ul class="fa-ul">
+            <li>
+                <span class="fas fa-undo fa-lg fa-li"></span>
+                <code>class="fas fa-undo"</code>
+            </li>
+            <li>
+                <span class="fas fa-undo-alt fa-lg fa-li"></span>
+                <code>class="fas fa-undo-alt"</code>
+            </li>
+            <li>
+                <span class="fas fa-trash fa-lg fa-li"></span>
+                <code>class="fas fa-trash"</code>
+            </li>
+            <li>
+                <span class="fas fa-trash-alt fa-lg fa-li"></span>
+                <code>class="fas fa-trash-alt"</code>
+            </li>
+            <li>
+                <span class="far fa-trash-alt fa-lg fa-li"></span>
+                <code>class="far fa-trash-alt"</code>
+            </li>
+        </ul>
+            
+        <h3>Cut, Copy and Paste</h3>
+        <ul class="fa-ul">
+            <li>
+                <span class="fas fa-cut fa-lg fa-li"></span>
+                <code>class="fas fa-cut"</code>
+            </li>
+            <li>
+                <span class="fas fa-copy fa-lg fa-li"></span>
+                <code>class="fas fa-copy"</code>
+            </li>
+            <li>
+                <span class="far fa-copy fa-lg fa-li"></span>
+                <code>class="far fa-copy"</code>
+            </li>
+            <li>
+                <span class="fas fa-clipboard fa-lg fa-li"></span>
+                <code>class="fas fa-clipboard"</code>
+            </li>
+            <li>
+                <span class="far fa-clipboard fa-lg fa-li"></span>
+                <code>class="far fa-clipboard"</code>
+            </li>
+        </ul>
+        <h3>Save, Upload and Download</h3>
+        <ul class="fa-ul">
+            <li>
+                <span class="fas fa-save fa-lg fa-li"></span>
+                <code>class="fas fa-save"</code>
+            </li>
+            <li>
+                <span class="far fa-save fa-lg fa-li"></span>
+                <code>class="far fa-save"</code>
+            </li>
+            <li>
+                <span class="fas fa-download fa-lg fa-li"></span>
+                <code>class="fas fa-download"</code>
+            </li>
+            <li>
+                <span class="fas fa-file-download fa-lg fa-li"></span>
+                <code>class="fas fa-file-download"</code>
+            </li>
+            <li>
+                <span class="fas fa-file-upload fa-lg fa-li"></span>
+                <code>class="fas fa-file-upload"</code>
+            </li>
+            <li>
+                <span class="fas fa-file-export fa-lg fa-li"></span>
+                <code>class="fas fa-file-export"</code>
+            </li>
+            <li>
+                <span class="fas fa-cloud fa-lg fa-li"></span>
+                <code>class="fas fa-cloud"</code>
+            </li>
+            <li>
+                <span class="fas fa-cloud-upload-alt fa-lg fa-li"></span>
+                <code>class="fas fa-cloud-upload-alt"</code>
+            </li>
+            <li>
+                <span class="fas fa-cloud-download-alt fa-lg fa-li"></span>
+                <code>class="fas fa-cloud-download-alt"</code>
+            </li>
+        </ul>
+        <br>
+        <h3>Audio Controls</h3>
+        <ul class="fa-ul">
+            <li>
+                <span class="fas fa-volume-up fa-lg fa-li"></span>
+                <code>class="fas fa-volume-up"</code>
+            </li>
+            <li>
+                <span class="fas fa-volume-down fa-lg fa-li"></span>
+                <code>class="fas fa-volume-down"</code>
+            </li>
+            <li>
+                <span class="fas fa-volume-off fa-lg fa-li"></span>
+                <code>class="fas fa-volume-off"</code>
+            </li>
+            <li>
+                <span class="fas fa-volume-mute fa-lg fa-li"></span>
+                <code>class="fas fa-volume-mute"</code>
+            </li>
+            <li>
+                <span class="fas fa-play fa-lg fa-li"></span>
+                <code>class="fas fa-play"</code>
+            </li>
+            <li>
+                <span class="fas fa-play-circle fa-lg fa-li"></span>
+                <code>class="fas fa-play-circle"</code>
+            </li>
+            <li>
+                <span class="far fa-play-circle fa-lg fa-li"></span>
+                <code>class="far fa-play-circle"</code>
+            </li>
+            <li>
+                <span class="fas fa-stop fa-lg fa-li"></span>
+                <code>class="fas fa-stop"</code>
+            </li>
+            <li>
+                <span class="fas fa-stop-circle fa-lg fa-li"></span>
+                <code>class="fas fa-stop-circle"</code>
+            </li>
+            <li>
+                <span class="far fa-stop-circle fa-lg fa-li"></span>
+                <code>class="far fa-stop-circle"</code>
+            </li>
+            <li>
+                <span class="fas fa-pause fa-lg fa-li"></span>
+                <code>class="fas fa-pause"</code>
+            </li>
+            <li>
+                <span class="fas fa-pause-circle fa-lg fa-li"></span>
+                <code>class="fas fa-pause-circle"</code>
+            </li>
+            <li>
+                <span class="far fa-pause-circle fa-lg fa-li"></span>
+                <code>class="far fa-pause-circle"</code>
+            </li>
+            <li>
+                <span class="fas fa-forward fa-lg fa-li"></span>
+                <code>class="fas fa-forward"</code>
+            </li>
+            <li>
+                <span class="fas fa-fast-forward fa-lg fa-li"></span>
+                <code>class="fas fa-fast-forward"</code>
+            </li>
+            <li>
+                <span class="fas fa-backward fa-lg fa-li"></span>
+                <code>class="fas fa-backward"</code>
+            </li>
+            <li>
+                <span class="fas fa-fast-backward fa-lg fa-li"></span>
+                <code>class="fas fa-fast-backward"</code>
+            </li>
+            <li>
+                <span class="fas fa-eject fa-lg fa-li"></span>
+                <code>class="fas fa-eject"</code>
+            </li>
+            <li>
+                <span class="fas fa-headphones fa-lg fa-li"></span>
+                <code>class="fas fa-headphones"</code>
+            </li>
+            <li>
+                <span class="fas fa-headphones-alt fa-lg fa-li"></span>
+                <code>class="fas fa-headphones-alt"</code>
+            </li>
+            <li>
+                <span class="fas fa-microphone fa-lg fa-li"></span>
+                <code>class="fas fa-microphone"</code>
+            </li>
+            <li>
+                <span class="fas fa-microphone-alt fa-lg fa-li"></span>
+                <code>class="fas fa-microphone-alt"</code>
+            </li>
+            <li>
+                <span class="fas fa-microphone-slash fa-lg fa-li"></span>
+                <code>class="fas fa-microphone-slash"</code>
+            </li>
+            <li>
+                <span class="fas fa-microphone-alt-slash fa-lg fa-li"></span>
+                <code>class="fas fa-microphone-alt-slash"</code>
+            </li>
+        </ul>
+        <h3>Plus, Minus and Checkmark</h3>
+        <ul class="fa-ul">
+            <li>
+                <span class="fas fa-plus fa-lg fa-li"></span>
+                <code>class="fas fa-plus"</code>
+            </li>
+            <li>
+                <span class="fas fa-plus-square fa-lg fa-li"></span>
+                <code>class="fas fa-plus-square"</code>
+            </li>
+            <li>
+                <span class="far fa-plus-square fa-lg fa-li"></span>
+                <code>class="far fa-plus-square"</code>
+            </li>
+            <li>
+                <span class="fas fa-plus-circle fa-lg fa-li"></span>
+                <code>class="fas fa-plus-circle"</code>
+            </li>
+            <li>
+                <span class="fas fa-minus fa-lg fa-li"></span>
+                <code>class="fas fa-minus"</code>
+            </li>
+            <li>
+                <span class="fas fa-minus-circle fa-lg fa-li"></span>
+                <code>class="fas fa-minus-circle"</code>
+            </li>
+            <li>
+                <span class="fas fa-minus-square fa-lg fa-li"></span>
+                <code>class="fas fa-minus-square"</code>
+            </li>
+            <li>
+                <span class="far fa-minus-square fa-lg fa-li"></span>
+                <code>class="far fa-minus-square"</code>
+            </li>
+            <li>
+                <span class="fas fa-check-circle fa-lg fa-li"></span>
+                <code>class="fas fa-check-circle"</code>
+            </li>
+            <li>
+                <span class="far fa-check-circle fa-lg fa-li"></span>
+                <code>class="far fa-check-circle"</code>
+            </li>
+            <li>
+                <span class="fas fa-check-square fa-lg fa-li"></span>
+                <code>class="fas fa-check-square"</code>
+            </li>
+            <li>
+                <span class="far fa-check-square fa-lg fa-li"></span>
+                <code>class="far fa-check-square"</code>
+            </li>
+        </ul>
+        </section>
+        </div>
+    </body>
+</html>
